@@ -5,9 +5,17 @@ public class Cat {
     private String color;
     private int age;
 
+    public Cat(String name, String color, int age){//конструктор
+        this.name = name;
+        this.color = color;
+        this.age = age;
+    }
+
     public int getAge(){
         return age;
     }
+
+
     public String getName(){
         return name;
     }
@@ -15,14 +23,12 @@ public class Cat {
    //     return color;
    // }
 
-    public void setAge(int age){
-        this.age = age;
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        }
     }
-    public Cat(String name, String color, int age){//конструктор
-        this.name = name;
-        this.color = color;
-        this.age = age;
-    }
+
 
     public void jump(){
         System.out.println(name + " подпрыгнул");
