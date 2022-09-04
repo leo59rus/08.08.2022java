@@ -10,6 +10,5 @@ public class MainHashMap {
         map.put("Britain", "Lond");
         map.put("France","Paris");
         System.out.println(map.get("France"));//paris
-
     }
 }

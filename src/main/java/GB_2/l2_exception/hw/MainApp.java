@@ -18,7 +18,7 @@ package GB_2.l2_exception.hw;
 // расчета (сумму элементов,
 //при условии что подали на вход корректный массив).
 public class MainApp {
-    private static int summ;
+
 
     public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
 
@@ -43,44 +43,37 @@ public class MainApp {
         };
 
         try {
-            mass(Str3);
+            mass(Str2);
         } catch (MyArrayDataException e) {
-            summ = 0;
+            e.printStackTrace();
         } catch (MyArraySizeException e) {
             System.out.println("Размер массива должен быть 4x4!");
 
         }
-        System.out.println(summ);
+
     }
 
     public static int mass(String[][] strings) throws MyArraySizeException, MyArrayDataException {
-        summ = 0;
+        int sum = 0;
 
         if (strings.length != 4) {
             throw new MyArraySizeException();
         }
-        for (int i = 0; i < strings.length; i++) {
-            for (int j = 0; j < strings[i].length; j++) {
-                if (strings[i].length != 4) {
-                    throw new MyArraySizeException();
-
-                }
+        for (int i = 0; i < 4; i++) {
+            if (strings[i].length != 4) {
+                throw new MyArraySizeException();
             }
-        }
-        for (int i = 0; i < strings.length; i++) {
-            for (int j = 0; j < strings[i].length; j++) {
+            for (int j = 0; j < 4; j++) {
                 try {
-                    summ = summ + Integer.parseInt(strings[i][j]);
+                    sum += Integer.parseInt(strings[i][j]);
                 } catch (NumberFormatException e) {
-
                     System.out.println("ошибка в ячейке [" + i +
                                                "][" + j + "]");
-
                 }
-
             }
         }
-        return summ;
+
+        return sum;
 
     }
 
