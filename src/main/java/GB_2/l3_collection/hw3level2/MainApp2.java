@@ -1,4 +1,4 @@
-package hw3level2;
+package GB_2.l3_collection.hw3level2;
 
 import java.util.HashMap;
 import java.util.HashSet;

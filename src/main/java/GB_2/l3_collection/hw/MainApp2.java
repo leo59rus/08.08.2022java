@@ -1,5 +1,7 @@
 package GB_2.l3_collection.hw;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -42,7 +44,8 @@ class PhoneBook {
 
 
     void add(String name, String number) {
-        if (phoneBook.containsKey(name)) {//если есть уже имя
+
+     if (phoneBook.containsKey(name)) {//если есть уже имя
             numberList = phoneBook.get(name);
             numberList.add(number);
             phoneBook.put(name, numberList);
