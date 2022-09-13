@@ -55,6 +55,7 @@ public class EchoClient {
                         break;
                     }
                     System.out.println("Сообщение от сервера: " + message);
+                    out.writeUTF(message);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
