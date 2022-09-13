@@ -1,5 +1,6 @@
-package Stepik;
+package Stepik.SecondsConverterHours;
 import java.util.Scanner;
+
 class TestBest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

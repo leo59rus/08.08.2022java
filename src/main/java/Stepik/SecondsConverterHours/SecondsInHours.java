@@ -1,4 +1,4 @@
-package Stepik;
+package Stepik.SecondsConverterHours;
 
 import java.util.Scanner;
 
