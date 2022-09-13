@@ -30,13 +30,14 @@ public class EchoServer {
 
             while(true){//poison pill
                 final String message = in.readUTF();
-                //при отправке енд заканчивается цикл отправки
-                // сообщений
+                //при отправке енд отправляется клиенту
+                // заканчивается цикл отправки сообщений
                 if("/end".equalsIgnoreCase(message)){
                     out.writeUTF("/end");
                     break;
                 }
-                out.writeUTF(message);
+                System.out.println("сообщение от клиента: " + message);
+                out.writeUTF("[echo] " + message);
             }
 
         } catch (IOException e) {
